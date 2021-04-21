@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Object dan class</title>
+</head>
+<body>
+    <form onsubmit="return false">
+        namatoples : <input type="text" id="namatoples"><br><br>
+        Warna : <input type="text" id="warna"><br><br>
+        bentuk : <input type="text" id="bentuk"><br><br>
+        <button onclick="klik()">Tekan ini</button>
+    </form>
+
+    <script>
+        function klik() {
+            let x = document.getElementById("namatoples").value;
+            let y = document.getElementById("warna").value;
+            let z = document.getElementById("bentuk").value;
+
+            class Toples {
+
+            namatoples;
+            warna;
+            bentuk;
+
+            constructor(namatoples, warna, bentuk){
+                this.namatoples = x;
+                this.warna = y;
+                this.bentuk = z;
+            }
+
+            berisi() {
+                return "Toples ini ada isinya";
+            }
+            kosong() {
+                return "Toples ini kosong";
+            }
+            isiulang() {
+                return "Toples ini telah di isi ulang oleh rengginang";
+            }
+        }
+
+        let sosis = new Toples;
+        let permenYupi = new Toples;
+        let Nastar = new Toples;
+
+        console.log("Nama toples : " + sosis.namatoples);
+        console.log("Warna : " + sosis.warna);
+        console.log("Status : " + sosis.berisi());
+
+        console.log("Nama toples : " + permenYupi.namatoples);
+        console.log("Warna : " + permenYupi.warna);
+        console.log("status : " + permenYupi.kosong())
+        
+        console.log("Nama toples : " + Nastar.namatoples);
+        console.log("Warna : " + Nastar.warna);
+        console.log("status : " + Nastar.isiulang())
+    }
+    </script>
+</body>
+</html>
